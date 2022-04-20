@@ -89,6 +89,10 @@ int main(int argc, char *argv[]){
 					if(e.type == SDL_QUIT){
 						quit = true;
 						printf("Exiting!\n");
+					}else if(e.type == SDL_MOUSEBUTTONUP){
+						int x = 0, y = 0;
+						SDL_GetMouseState(&x, &y);
+						printf("Mouse UP: %d, %d\n", x, y);
 					}
 				}
 			}
